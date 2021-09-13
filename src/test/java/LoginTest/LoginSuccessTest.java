@@ -14,7 +14,7 @@ public class LoginSuccessTest extends LoginTestBase{
 		lp.enterUserName("admin");
 		lp.enterPassword("123456");
 		lp.clickLogin();
-		System.out.println();
+		System.out.println("Checking");
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("Codecarrots"));
 		
 	}
