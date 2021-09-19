@@ -12,5 +12,8 @@ public void presentUserLink() {
 	hp.presentUser();
 	Assert.assertTrue(true);
 	System.out.println("User Link Present Test Passed");
+	
+	hp.scrollToElement(driver);
+	System.out.println("Checking");
 }
 }
