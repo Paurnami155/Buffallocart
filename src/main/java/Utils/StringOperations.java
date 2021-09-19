@@ -1,5 +1,7 @@
 package Utils;
 
+import java.util.Random;
+
 public class StringOperations {
 
 	public String randomStringGenerator(int n) {
@@ -23,9 +25,16 @@ public class StringOperations {
 		return sb.toString();
 	}
 
-	public int randomInteger(int size) {
-		int random = (int) Math.random();
-		return random;
+	public static int randomInteger(int size) {
+		//int b = (int)(Math.random()*(max-min+1)+min);
+		Random rnd =new Random();
+		 StringBuffer sb=new StringBuffer(size);
+		 for(int i=1;i<=size;i++)
+		 {
+			 sb.append(rnd.nextInt(10));
+		 }
+		 System.out.println(sb.toString());
+		 return Integer.parseInt(sb.toString());
 	}
 
 }

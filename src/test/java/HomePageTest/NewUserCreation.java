@@ -11,20 +11,25 @@ public class NewUserCreation extends HomePageTestBase{
 public void createNewUser() {
 	HomePage hp = new HomePage(driver);
 	hp.clickUserLink(); //Clicking User Link 
-	UserCreationPage up = new UserCreationPage();
-	up.clickNewUserLink();  //Clicking New User Link
+	UserCreationPage up = new UserCreationPage(driver);
+	up.navigateToUserCreationPage();  //Clicking New User Link
 	
-	up.enterUserFullName("Robert");
-	up.enterEmployeeID("RT12345");
-	up.enterUserName("Rob");
+	up.enterUserFullName("Paurnami");
+	
+	up.enterEmployeeID("RT");
+	up.enterUserName("Pournami");
 	up.enterPassword("123456");
 	up.confirmPassword("123456");
-	up.enterEmail("paaru155@gmail.com");
-	up.selectLocale();
-	up.selectLanguage();
+	up.enterEmail();
+	up.selectLocale("English (United States)");
+	up.selectLanguage("English");
 	up.enterPhoneNumber("1234567890");
 	up.enterMobileNumber("6754654323");
 	up.enterSkypeID("66545");
-	up.selectUserType();
+	up.btnClickChooseImage("C:\\Testfile.png");
+	up.selectUserType("Staff");
+	up.selectDesignation("Manager");
+	up.clickCreateUser();
+	//up.searchWithNewUser();
 }
 }

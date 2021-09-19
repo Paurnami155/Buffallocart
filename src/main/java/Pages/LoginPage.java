@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utils.Screenshot;
+
 	public class LoginPage {
 	public LoginPage(WebDriver driver) {
 			PageFactory.initElements(driver, this)	;	
@@ -24,7 +26,11 @@ import org.openqa.selenium.support.PageFactory;
 		password.sendKeys(pass);
 		
 	}
+	public void takeScrnShot(WebDriver driver) {
+		Screenshot.takeScreenshot(driver,"C:\\Users\\MY-PC\\eclipse-workspace\\BuffalloCaart\\loginscreenshot.png");	
+	}
 	public void clickLogin() {
+		
 		signin.click();
 		
 	}
